@@ -9,47 +9,59 @@
 
 // foprma mais eficiente
 
-class StackNode {
+class StackNode{
     constructor(val){
         this.val = val;
         this.next = null;
     }
 }
 
-
-class Stack {
+class Stack{
     constructor(){
         this.top = null;
-        this.size = 0
+        this.size = 0;
     }
 
     push(val){
+        const newNode = new StackNode(val);
+
         if(this.size === 0){
-            this.top = new StackNode(val);
+            this.top = newNode;
         }else{
-            const pushedNode = new StackNode(val);
-            pushedNode = this.top;
-            this.top = pushedNode
+            newNode.next = this.top;
+            this.top = newNode;
         }
 
-        this.size++;
+        this.size ++;
     }
 
     pop(){
         if(this.size === 0) return null;
-        const popedNode = this.top;
-        this.top = this.top.next;
-        this.size--;
-        return popedNode.val;
+
+        const removedNode = this.top;
+        this.top = this.top.next
+        this.size --;
+        
+        return removedNode.val;
     }
 
     getTop(){
+        if(this.size === 0) return null;
+
         return this.top.val;
+    }
+
+    getSize(){
+        return this.size;
     }
 }
 
+
 const myStack = new Stack();
 
-myStack.push('a');
-console.log(myStack.size);
-console.log(myStack.pop());
+myStack.push(3)
+myStack.push(4)
+myStack.push(6)
+myStack.pop()
+
+console.log(myStack.getSize());
