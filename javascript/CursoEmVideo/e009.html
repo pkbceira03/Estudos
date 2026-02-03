@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>maior??</title>
+</head>
+<body>
+    <h1>De onde vc é??</h1>
+    <input type="text" name="lugar" id="lugar">
+    <button onclick="podeVotar()">enviar</button>
+    <p id="resultado"></p>
+
+    <script>
+        function podeVotar(){
+            var lugar = document.getElementById('lugar');
+            var verifica = lugar.value.toUpperCase();
+            var result = document.getElementById('resultado')
+            if(verifica == 'BRASIL'){
+                result.innerHTML = 'Você é brasileiro'
+            }else {
+                result.innerHTML = 'Você é estrangeiro'
+            }
+        }
+    </script>
+</body>
+</html>

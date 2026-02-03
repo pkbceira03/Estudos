@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>maior??</title>
+</head>
+<body>
+    <h1>Eu posso votar??</h1>
+    <input type="number" name="idade" id="idade">
+    <button onclick="podeVotar()">enviar</button>
+    <p id="resultado"></p>
+
+    <script>
+        function podeVotar(){
+            var idade = document.getElementById('idade');
+            var verifica = Number(idade.value);
+            var result = document.getElementById('resultado')
+            if(verifica < 16){
+                result.innerHTML = 'Você não pode votar'
+            }else if (verifica < 18 || verifica > 67){
+                result.innerHTML = 'Você pode votar, mas não é obrigado'
+            }else {
+                result.innerHTML = 'Você obrigado votar'
+            }
+        }
+    </script>
+</body>
+</html>

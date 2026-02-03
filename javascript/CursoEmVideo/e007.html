@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somar</title>
+</head>
+<body>
+    <h1>escolha os numeros</h1>
+    <input type="number" name="input1" id="input1">
+    <input type="number" name="input2" id="input2">
+    <button >somar</button>
+    <p>resultado</p>
+
+    <script>
+        
+        var btn = document.getElementsByTagName('button')[0]
+        btn.addEventListener('click', Somar)
+        function Somar(){
+            var t1 = document.getElementById('input1')
+            var t2 = document.getElementById('input2')
+            var n1 = Number(t1.value)
+            var n2 = Number(t2.value)
+            console.log(n1, n2)
+            var s = n1 + n2
+            var result = document.getElementsByTagName('p')[0]
+            result.innerHTML = `o resultado é ${s}`
+        }
+    </script>
+</body>
+</html>
