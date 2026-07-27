@@ -1,0 +1,15 @@
+{
+  "name": "csv_app",
+  "version": "1.0.0",
+  "description": "ler de dados pelo prompt e salvar em um csv",
+  "license": "ISC",
+  "author": "Pedro Cabeceira",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "csv-writer": "^1.6.0"
+  }
+}
