@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hours</title>
+</head>
+<body>
+    <h1>Ours Hours</h1>
+    <% let count = 0; %>
+    <% for (let day of days) { %>
+        <% count++;%>
+        <% const hoursObj = hours[day] || hours['defaultHours'] %>
+        <section style="display: inline-flex; flex-direction: column; padding: 5px;">
+            <h2><%= day.toUpperCase() %></h2>
+            <div>
+                <% if (count === weekday) { %>
+                    <% if (hoursObj.open) {%>
+                        <p><strong>Open: <%= hoursObj.open %></strong></p>
+                        <p><strong>Close: <%= hoursObj.close %></strong></p>
+                    <% }else{ %>
+                        <strong>CLOSED</strong>
+                    <% } %>
+                <% }else{ %>
+                    <% if (hoursObj.open) {%>
+                        <p>Open: <%= hoursObj.open %></p>
+                        <p>Close: <%= hoursObj.close %></p>
+                    <% }else{ %>
+                        <p>CLOSED</p>
+                    <% } %>
+                <% } %>
+            </div>
+        </section>
+    <% } %>
+</body>
+</html>
