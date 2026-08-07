@@ -1,0 +1,34 @@
+{
+  "name": "app_authentication",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@fastify/cookie": "^10.0.1",
+    "@fastify/formbody": "^8.0.2",
+    "@fastify/passport": "^3.0.2",
+    "@fastify/session": "^11.1.2",
+    "@fastify/view": "^10.0.2",
+    "fastify": "^5.11.2",
+    "handlebars": "^4.7.9",
+    "jsonwebtoken": "^9.0.3",
+    "nodemon": "^3.1.14",
+    "passport": "^0.7.0",
+    "passport-jwt": "^4.0.1",
+    "passport-local": "^1.0.0",
+    "sequelize": "^6.37.8",
+    "sqlite3": "^5.1.7"
+  },
+  "devDependencies": {
+    "@types/jsonwebtoken": "^9.0.10",
+    "@types/passport-jwt": "^4.0.1",
+    "@types/passport-local": "^1.0.38"
+  }
+}
